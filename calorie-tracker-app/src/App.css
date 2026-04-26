@@ -1,0 +1,238 @@
+/* RESET */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: 0.3s;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.dark .container {
+  background: #0f172a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  text-align: center;
+}
+
+body.dark .stat-card {
+  background: #1e293b;
+}
+
+.stat-card p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* PROGRESS */
+.progress-wrapper {
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+body.dark .progress-container {
+  background: #334155;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.progress-wrapper p {
+  text-align: right;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* STREAK */
+.streak {
+  text-align: center;
+  font-weight: 600;
+  color: #f59e0b;
+  margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f1f5f9;
+}
+
+body.dark .card {
+  background: #1e293b;
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.controls input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  background: #f8fafc;
+}
+
+body.dark .controls input {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: white;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #6366f1;
+  color: white;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+/* DELETE BUTTON */
+.entry button:last-child {
+  background: #ef4444;
+}
+
+.entry button:last-child:hover {
+  background: #dc2626;
+}
+
+/* ENTRY */
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #22c55e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  z-index: 999;
+  animation: slideDown 2s ease;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .stats {
+    flex-direction: column;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+}
+
+.card input {
+  width: 100%;
+  margin-top: 10px;
+}
